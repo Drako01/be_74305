@@ -1,198 +1,139 @@
-# Unidad 2 - Programación Backend Avanzada
+# Backend con NodeJS
 
-Este material tiene como objetivo servir como guía teórica y práctica para los siguientes temas fundamentales de JavaScript moderno y programación backend avanzada.
+## 🧠 **Unidad 3: Desarrollo Avanzado de Backend con Node.js**
 
-## 🧠 Contenidos y Objetivos
+### 🔹 **1. ¿Qué es Node.js y para qué se usa?**
 
-### ✔️ Repaso de Funciones en JavaScript
+**Explicación simple:**
+Node.js es un entorno de ejecución para JavaScript fuera del navegador. Nos permite escribir código JS en el servidor.
 
-Las funciones son bloques de código reutilizables. Pueden recibir parámetros y devolver resultados.
+**Ejemplo para mostrar en consola:**
 
-```js
-function saludar(nombre) {
-  return `Hola, ${nombre}`;
-}
+```bash
+node
+> console.log("Hola desde Node.js");
 ```
 
-También existen funciones flecha:
+**Explicación visual:**
+
+* Cliente (navegador) → Frontend
+* Servidor (Node.js) → Backend
+
+---
+
+### 🔹 **2. Módulos nativos vs. módulos de terceros**
+
+**👉 Módulo nativo:** Ya viene con Node.js (ej: `fs`, `http`, `path`, etc.)
+
+**👉 Módulo de terceros:** Lo instalás con NPM. No viene con Node. (ej: `express`, `lodash`, etc.)
+
+**Ejemplo práctico:**
 
 ```js
-const saludar = nombre => `Hola, ${nombre}`;
+// Módulo nativo
+const path = require('path');
+console.log(path.basename('/ruta/archivo.txt')); // archivo.txt
 ```
 
-### ✔️ Callbacks
-
-Un **callback** es una función que se pasa como argumento a otra función y se ejecuta luego.
-
 ```js
-function procesarUsuario(usuario, callback) {
-  console.log("Procesando usuario...");
-  callback(usuario);
-}
-
-procesarUsuario("Juan", function(nombre) {
-  console.log(`Usuario procesado: ${nombre}`);
-});
-```
-
-### ✔️ Promesas
-
-Una promesa representa un valor que estará disponible ahora, en el futuro o nunca.
-
-```js
-function dividir(a, b) {
-  return new Promise((resolve, reject) => {
-    if (b === 0) reject("No se puede dividir por 0");
-    else resolve(a / b);
-  });
-}
-
-dividir(10, 2)
-  .then(resultado => console.log("Resultado: ", resultado))
-  .catch(error => console.error("Error: ", error));
-```
-
-### ✔️ Async / Await
-
-Forma moderna y legible de manejar promesas:
-
-```js
-async function calcularDivision() {
-  try {
-    const resultado = await dividir(10, 2);
-    console.log("Resultado async/await: ", resultado);
-  } catch (error) {
-    console.error("Error async/await: ", error);
-  }
-}
-
-calcularDivision();
-```
-
-### ✔️ Sincronismo vs Asincronismo
-
-* Código sincrónico: se ejecuta línea por línea.
-* Código asincrónico: permite seguir ejecutando otras tareas mientras se resuelve una operación.
-
-```js
-console.log("Inicio");
-setTimeout(() => console.log("Tarea asincrónica"), 1000);
-console.log("Fin");
-```
-
-## 🚀 ECMAScript Moderno (ES6+)
-
-### ES6
-
-* `let` y `const`
-* Template strings
-* Arrow functions
-* Destructuración
-* Spread/Rest operator
-
-```js
-const user = { name: "Ana", age: 30 };
-const user2 = { ...user, email: "ana@email.com" }; // spread
-```
-
-### ES7
-
-* Exponenciación: `2 ** 3 // 8`
-* `Array.includes()`
-
-```js
-const frutas = ["manzana", "pera"];
-frutas.includes("pera"); // true
-```
-
-### ES8
-
-* `Object.entries()`, `Object.values()`
-* Padding de strings
-* Async/await
-
-### ES9
-
-* Spread operator en objetos
-* Rest operator
-
-### ES10
-
-* `Array.flat()`
-* `trimStart()` y `trimEnd()`
-
-```js
-const texto = "   hola mundo   ";
-console.log(texto.trim()); // "hola mundo"
-```
-
-### ES11
-
-* Nullish Coalescing `??`
-
-```js
-const nombre = null ?? "Invitado"; // "Invitado"
-```
-
-* Optional chaining: `usuario?.direccion?.calle`
-
-## 💻 Actividad en Clase
-
-```js
-const inventario = {
-  remeras: 30,
-  pantalones: 20,
-  zapatillas: 15
-};
-
-const stock = {
-  gorros: 5,
-  zapatillas: 8,
-  remeras: 12
-};
-
-// Crear lista con todos los tipos de productos sin repetir
-const listaProductos = [];
-for (const key of Object.keys(inventario)) {
-  if (!listaProductos.includes(key)) listaProductos.push(key);
-}
-for (const key of Object.keys(stock)) {
-  if (!listaProductos.includes(key)) listaProductos.push(key);
-}
-
-console.log("Tipos de productos:", listaProductos);
-
-// Obtener total de productos vendidos
-const total = [...Object.values(inventario), ...Object.values(stock)].reduce((acc, val) => acc + val, 0);
-console.log("Total vendidos:", total);
-```
-
-## 📌 Ejemplo de uso de map con callback
-
-```js
-const numeros = [1, 2, 3];
-const duplicados = numeros.map(n => n * 2);
-console.log(duplicados);
-```
-
-## 📌 Ejemplo de función con callback personalizado
-
-```js
-function operacion(a, b, callback) {
-  return callback(a, b);
-}
-
-function sumar(a, b) { return a + b; }
-function restar(a, b) { return a - b; }
-
-console.log(operacion(5, 2, sumar)); // 7
-console.log(operacion(5, 2, restar)); // 3
+// Módulo de terceros
+const _ = require('lodash'); // instalar primero con npm install lodash
+console.log(_.capitalize('hola mundo')); // Hola mundo
 ```
 
 ---
 
-## 🧑‍🏫 Profesor  
+### 🔹 **3. ¿Qué es NPM y cómo se usan las dependencias?**
 
-👨‍💻 **Alejandro Daniel Di Stefano**  
-📌 **Desarrollador Full Stack**  
-🔗 **GitHub:** [Drako01](https://github.com/Drako01)  
+**Explicación:**
+NPM (Node Package Manager) es la herramienta para instalar paquetes (dependencias).
+
+**Pasos para mostrar:**
+
+```bash
+mkdir clase-node
+cd clase-node
+npm init -y
+npm install lodash
+```
+
+Explicales el archivo `package.json` y `node_modules`.
+
+---
+
+### 🔹 **4. ¿Cómo se actualizan las dependencias?**
+
+**Mostrar comandos:**
+
+```bash
+npm outdated          # Muestra qué paquetes están viejos
+npm update            # Actualiza a la versión permitida por package.json
+npm install lodash@latest   # Actualiza lodash a su última versión
+```
+
+---
+
+### 🔹 **5. Sincronía y asincronía (con archivos)**
+
+**Explicación simple:**
+
+* *Sincrónico:* Ejecuta una cosa, espera, y luego sigue.
+* *Asíncrono:* Llama a algo, y sigue con lo demás sin esperar.
+
+---
+
+### 🔹 **6. El módulo `fs` (File System)**
+
+**Mostrar cómo crear, leer y borrar un archivo:**
+
+#### 🟡 **Versión Sincrónica**
+
+```js
+const fs = require('fs');
+
+fs.writeFileSync('archivo.txt', 'Hola desde Node!');
+const contenido = fs.readFileSync('archivo.txt', 'utf8');
+console.log('Contenido leído:', contenido);
+```
+
+#### 🔵 **Versión Asíncrona con Callbacks**
+
+```js
+fs.writeFile('archivo_async.txt', 'Texto asíncrono', (err) => {
+  if (err) return console.error(err);
+  fs.readFile('archivo_async.txt', 'utf8', (err, data) => {
+    if (err) return console.error(err);
+    console.log('Contenido leído async:', data);
+  });
+});
+```
+
+#### 🔷 **Versión con Promesas (`fs.promises`)**
+
+```js
+const fs = require('fs/promises');
+
+async function manejarArchivo() {
+  await fs.writeFile('archivo_promesa.txt', 'Texto usando promesas');
+  const contenido = await fs.readFile('archivo_promesa.txt', 'utf8');
+  console.log('Contenido con promesas:', contenido);
+}
+
+manejarArchivo();
+```
+
+---
+
+### 🔹 **7. Ventajas y desventajas del FileSystem**
+
+**Ventajas:**
+
+* Control total del archivo
+* Permite almacenamiento rápido y local
+
+**Desventajas:**
+
+* No es escalable en apps grandes (por eso se usan bases de datos)
+* Puede bloquear procesos si se usa sincrónicamente
+
+---
