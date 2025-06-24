@@ -1,0 +1,28 @@
+{
+  "name": "mi_plicacion_node",
+  "version": "1.0.0",
+  "description": "Aca vamos a describir que es y que hace nuestra App.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Drako01/be_74305.git"
+  },
+  "keywords": [
+    "Aplicacion",
+    "CoderHouse",
+    "Node"
+  ],
+  "author": "Alejandro Di Stefano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Drako01/be_74305/issues"
+  },
+  "homepage": "https://github.com/Drako01/be_74305#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.7",
+    "chalk": "^4.1.2"
+  }
+}

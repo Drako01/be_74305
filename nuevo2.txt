@@ -1,0 +1,1 @@
+Contenido asincronico del archivo nuevo2.txt
