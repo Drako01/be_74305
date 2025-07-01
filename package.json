@@ -1,8 +1,18 @@
 {
-  "name": "mi_plicacion_node",
+  "name": "nuestro_primer_servidor_node",
   "version": "1.0.0",
-  "description": "Aca vamos a describir que es y que hace nuestra App.",
-  "main": "app.js",
+  "description": "Aplicamos conocimientos para crear el Primer servidor en Node",
+  "main": "index.js",
+  "dependencies": {
+    "ansi-styles": "^4.3.0",
+    "bootstrap": "^5.3.7",
+    "chalk": "^4.1.2",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "has-flag": "^4.0.0",
+    "supports-color": "^7.2.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,19 +20,10 @@
     "type": "git",
     "url": "git+https://github.com/Drako01/be_74305.git"
   },
-  "keywords": [
-    "Aplicacion",
-    "CoderHouse",
-    "Node"
-  ],
   "author": "Alejandro Di Stefano",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Drako01/be_74305/issues"
   },
-  "homepage": "https://github.com/Drako01/be_74305#readme",
-  "dependencies": {
-    "bootstrap": "^5.3.7",
-    "chalk": "^4.1.2"
-  }
+  "homepage": "https://github.com/Drako01/be_74305#readme"
 }
