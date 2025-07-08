@@ -1,20 +1,21 @@
 {
-  "name": "nuestro_primer_servidor_node",
+  "name": "primer_servidor_con_vistas",
   "version": "1.0.0",
   "description": "Aplicamos conocimientos para crear el Primer servidor en Node",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
-    "ansi-styles": "^4.3.0",
     "bootstrap": "^5.3.7",
-    "chalk": "^4.1.2",
-    "color-convert": "^2.0.1",
-    "color-name": "^1.1.4",
     "express": "^5.1.0",
-    "has-flag": "^4.0.0",
-    "supports-color": "^7.2.0"
+    "express-handlebars": "^8.0.3",
+    "multer": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",

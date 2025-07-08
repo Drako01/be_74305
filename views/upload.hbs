@@ -1,0 +1,20 @@
+{{!< main}} <section class="container">
+    <h2>Subir Archivo</h2>
+    {{#if msg}}
+    <p class="alert">{{msg}}</p>
+    {{/if}}
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="miArchivo" required>
+        <button type="submit">Enviar</button>
+    </form>
+    {{#if fileUrl}}
+    <div class="container logo">
+        {{#if isImage}}
+        <img src="{{fileUrl}}" alt="Imagen Subida">
+        {{else}}
+        <a href="{{fileUrl}}" download="">Descargar archivo</a>
+        {{/if}}
+    </div>
+    {{/if}}
+    </section>
