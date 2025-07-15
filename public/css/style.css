@@ -115,3 +115,25 @@ button:hover {
 .btn-volver:hover {
     background-color: #0056b3;
 }
+
+#messages {
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+}
+
+#messages li{
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+input[type="text"]{
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

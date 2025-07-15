@@ -1,14 +1,15 @@
 {
-  "name": "primer_servidor_con_vistas",
+  "name": "primer_servidor_con_chat",
   "version": "1.0.0",
-  "description": "Aplicamos conocimientos para crear el Primer servidor en Node",
+  "description": "Aplicamos conocimientos para crear el Primer servidor en Node con Chat",
   "main": "index.js",
   "type": "module",
   "dependencies": {
     "bootstrap": "^5.3.7",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
-    "multer": "^2.0.1"
+    "socket.io": "^4.8.1",
+    "sweetalert2": "^11.22.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
