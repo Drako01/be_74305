@@ -4,8 +4,10 @@ import { Server } from 'socket.io';
 import { engine } from 'express-handlebars';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { connectToMongoDB } from './config/db/connect.config.js';
 
 import homeRouter from './routes/home.router.js';
+import clientsRouter from './routes/clients.router.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,6 +16,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const httpServer = createServer(app)
 const io = new Server(httpServer)
+
+app.use(express.json());
 
 const PORT = 3000;
 
@@ -29,6 +33,8 @@ app.use('/sweetalert2', express.static(path.join(__dirname, 'node_modules/sweeta
 
 /** 3) Routers */
 app.use('/', homeRouter);
+// Rutas API
+app.use('/api/users', clientsRouter);
 
 /** 4) Seteo de Error 404 */
 app.use((req, res) => {
@@ -48,5 +54,9 @@ io.on('connection', (socket) => {
     });
 })
 
+const startServer = async () => {
+    await connectToMongoDB();
+    httpServer.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`))
+}
 
-httpServer.listen(PORT, () => console.log(`Servidor escuchando en http://localhost:${PORT}`))
+startServer();

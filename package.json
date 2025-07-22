@@ -1,13 +1,14 @@
 {
-  "name": "primer_servidor_con_chat",
-  "version": "1.0.0",
-  "description": "Aplicamos conocimientos para crear el Primer servidor en Node con Chat",
+  "name": "primer_servidor_con_chat_y_mongo",
+  "version": "2.0.0",
+  "description": "Aplicamos conocimientos para crear el Primer servidor en Node con Chat, y conexion a Mongo DB usando Postman",
   "main": "index.js",
   "type": "module",
   "dependencies": {
     "bootstrap": "^5.3.7",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
+    "mongoose": "^8.16.4",
     "socket.io": "^4.8.1",
     "sweetalert2": "^11.22.2"
   },
