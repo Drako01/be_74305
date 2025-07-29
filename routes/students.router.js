@@ -11,7 +11,6 @@ router.get('/', async (req, res) => {
     res.json(users);
 });
 
-
 // Crear un nuevo Usuario
 router.post('/', async (req, res) => {
     try {
@@ -43,7 +42,6 @@ router.get('/:id', async (req, res) => {
         res.status(400).json({ error: error.message })
     }
 });
-
 
 // Actualizar usuarios segun su id
 router.put('/:id', async (req, res) => {

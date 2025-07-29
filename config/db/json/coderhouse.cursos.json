@@ -1,0 +1,27 @@
+[{
+  "_id": {
+    "$oid": "68880e49bb0bc902899e5b3f"
+  },
+  "title": "Backend 2",
+  "description": "Segunda parte del curso de Backend de Coderhouse",
+  "students": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68880e50bb0bc902899e5b41"
+  },
+  "title": "Backend 3",
+  "description": "Tercera parte del curso de Backend de Coderhouse",
+  "students": [],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "688819e99e0ab565c28ca514"
+  },
+  "title": "Backend 1",
+  "description": "Primera parte del curso de Backend de Coderhouse",
+  "students": [],
+  "__v": 0
+}]

@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "68880f1afdf1166e1cad35af"
+  },
+  "name": "Alejandro",
+  "email": "alejandro@email.com",
+  "age": 49,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68880f2cfdf1166e1cad35b1"
+  },
+  "name": "Jesica",
+  "email": "jesica@email.com",
+  "age": 20,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68880f37fdf1166e1cad35b3"
+  },
+  "name": "Andres",
+  "email": "andres@email.com",
+  "age": 33,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68880f43fdf1166e1cad35b5"
+  },
+  "name": "Hugo",
+  "email": "hugo@email.com",
+  "age": 29,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68880f51fdf1166e1cad35b7"
+  },
+  "name": "Natalia",
+  "email": "naty@email.com",
+  "age": 22,
+  "__v": 0
+}]
