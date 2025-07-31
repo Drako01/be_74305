@@ -5,6 +5,7 @@ import { engine } from 'express-handlebars';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { connectToMongoDB, connectToMongoDBAtlas } from './config/db/connect.config.js';
+import logger from './middleware/logger.js'
 
 import homeRouter from './routes/home.router.js';
 import studentsRouter from './routes/students.router.js';
@@ -16,6 +17,7 @@ const __dirname = path.dirname(__filename);
 
 
 const app = express();
+app.use(logger); 
 const httpServer = createServer(app)
 const io = new Server(httpServer)
 
@@ -56,6 +58,7 @@ io.on('connection', (socket) => {
         console.log('🔴 Usuario desconectado.!')
     });
 })
+
 
 const altas = true;
 
