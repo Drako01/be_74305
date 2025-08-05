@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "10b4ddda-0c14-4374-818b-80fac3fd3750",
+		"name": "Cursos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925227",
+		"_collection_link": "https://armotusitio.postman.co/workspace/CoderHouse---Backend~b3f5fd76-9d52-46eb-aaf3-f22c00f66e18/collection/26925227-10b4ddda-0c14-4374-818b-80fac3fd3750?action=share&source=collection_link&creator=26925227"
+	},
+	"item": [
+		{
+			"name": "Ver todos los Cursos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear un Curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"title\": \"Backend 3\",\r\n\t\"description\": \"Tercera parte del curso de Backend de Coderhouse\",\r\n\t\"students\": []\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inscribir a un Alumno en un Curso",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses/68881f5c11c8f6f379177570/inscription/68881ed811c8f6f379177562",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"68881f5c11c8f6f379177570",
+						"inscription",
+						"68881ed811c8f6f379177562"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar a un Alumno en un Curso inscripto",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses/68880e2abb0bc902899e5b3d/inscription/68880f1afdf1166e1cad35af",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"68880e2abb0bc902899e5b3d",
+						"inscription",
+						"68880f1afdf1166e1cad35af"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Curso ",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/courses/688819fa9e0ab565c28ca517",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"courses",
+						"688819fa9e0ab565c28ca517"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

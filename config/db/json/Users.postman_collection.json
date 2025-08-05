@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "004d7c26-1dbc-4a4e-a2c6-0e4a359ca6a0",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925227",
+		"_collection_link": "https://armotusitio.postman.co/workspace/CoderHouse---Backend~b3f5fd76-9d52-46eb-aaf3-f22c00f66e18/collection/26925227-004d7c26-1dbc-4a4e-a2c6-0e4a359ca6a0?action=share&source=collection_link&creator=26925227"
+	},
+	"item": [
+		{
+			"name": "Listar Users",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Usuario",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t \"name\": \"Natalia\", \r\n\t \"email\": \"naty@email.com\", \r\n\t \"age\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un Usuario por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/students/687ee7a2c89b241a49993c66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students",
+						"687ee7a2c89b241a49993c66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar un Usuario por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Jorge\",\r\n\t\"email\": \"jorge@email.com\",\r\n\t\"age\": 59\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/students/687ee7a2c89b241a49993c66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students",
+						"687ee7a2c89b241a49993c66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar un Usuario por ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t \"name\": \"Ana\", \r\n\t \"email\": \"ana@email.com\", \r\n\t \"age\": 26\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/students/687ee7a2c89b241a49993c66",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"students",
+						"687ee7a2c89b241a49993c66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Populate Demo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/popular/demo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"popular",
+						"demo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Aggregations Demo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/aggregations/cursos/resumen",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"aggregations",
+						"cursos",
+						"resumen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

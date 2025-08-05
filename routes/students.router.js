@@ -8,7 +8,7 @@ const router = Router();
 // Obtener todos lo Usuarios
 router.get('/', async (req, res) => {
     const users = await User.find();
-    res.json(users);
+    res.status(200).json(users);
 });
 
 // Crear un nuevo Usuario
